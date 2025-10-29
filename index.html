@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annie Zhao - Personal Webpage</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind with custom fonts and colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        // Professional Blue & Orange Palette
+                        'brand-blue': {
+                            '700': '#1e40af', // Darker, professional accent (blue-800)
+                            '900': '#172554'  // Very dark navy for text/headings (blue-950)
+                        },
+                        'brand-orange': {
+                            '500': '#F59E0B', // A vibrant, complementary accent
+                            '600': '#D97706'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Simple style to hide non-active tabs */
+        .page-content.hidden {
+            display: none;
+        }
+        .pdf-viewer.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-white font-sans text-slate-800">
+
+    <!-- Main Content Container -->
+    <div class="max-w-4xl mx-auto p-6 md:p-12">
+        
+        <!-- Header Section -->
+        <header class="flex flex-col sm:flex-row justify-between sm:items-center gap-6 pb-8 border-b border-slate-200">
+            <!-- Name and Title -->
+            <div>
+                <h1 class="text-4xl font-bold text-brand-blue-900">Annie Zhao</h1>
+                <p class="text-xl text-slate-600 mt-1">Finance Student at The University of Texas at Dallas</p>
+            </div>
+            
+            <!-- Texas Graphic Placeholder -->
+            <div class="flex-shrink-0 w-24 h-24">
+                <!-- 
+                  IMPORTANT: Replace the 'src' attribute below with a link to your own image.
+                  1. Upload your image (e.g., a map) to your GitHub repository.
+                  2. Get the direct link to the file.
+                  3. Paste the link into src="...".
+                -->
+                <img src="https://placehold.co/100x100/DBEAFE/172554?text=Upload+Map+Image" 
+                     alt="Map of Texas with a star on Dallas"
+                     class="w-full h-full object-cover rounded-lg border-2 border-slate-200">
+            </div>
+        </header>
+
+        <!-- Tab Navigation -->
+        <nav class="flex flex-wrap border-b border-slate-200" aria-label="Tabs" id="main-nav">
+            <button class="tab-button active" onclick="showPage('about')">About</button>
+            <button class="tab-button" onclick="showPage('resume')">Resume</button>
+            <button class="tab-button" onclick="showPage('orgs')">Organizations & Projects</button>
+            <button class="tab-button" onclick="showPage('writing')">Writing Samples</button>
+            <button class="tab-button" onclick="showPage('goals')">Goals</button>
+            <button class="tab-button" onclick="showPage('contact')">Contact</button>
+        </nav>
+
+        <!-- Main Content Section -->
+        <main class="mt-8" id="main-content">
+
+            <!-- About Page Content -->
+            <div id="page-about" class="page-content">
+                <div class="flex flex-col md:flex-row items-start gap-8 md:gap-12">
+                    <!-- Headshot Placeholder -->
+                    <div class="flex-shrink-0 w-full md:w-1/3 flex justify-center">
+                        <img src="https://placehold.co/400x400/F59E0B/172554?text=:)" 
+                             alt="A professional headshot of Annie Zhao"
+                             class="w-64 h-64 rounded-full object-cover shadow-xl border-4 border-white ring-2 ring-brand-blue-700">
+                    </div>
+                    
+                    <!-- About Me Section -->
+                    <div class="w-full md:w-2/3">
+                        <h2 class="text-3xl font-bold text-brand-blue-900 mb-4">About Me</h2>
+                        <div class="space-y-4 text-slate-700 text-lg">
+                            <p>I am a driven B.S. in Finance student at The University of Texas at Dallas (graduating December 2026) with a passion for the data-driven intersection of finance and supply chain management.</p>
+                            <p>My professional experience includes a Global Operations internship at Bank of America, where I developed a solution to reduce regulatory risk, and a long-term role as a Marketing Analyst.</p>
+                            <p>Currently, I serve as the Director of Mentorship for the Finance Leadership Council, applying strong analytical and team leadership skills while developing technical proficiency in Excel, Tableau, and R.</p>
+                            <p>I am actively seeking full-time opportunities where I can apply my quantitative skills and logistical mindset to optimize financial operations and supply chain efficiency.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resume Page Content -->
+            <div id="page-resume" class="page-content hidden">
+                <h2 class="text-3xl font-bold text-brand-blue-900 mb-6">Resume</h2>
+                <!-- 
+                  IMPORTANT: For this embed to work on your live website, you MUST upload
+                  "Annie Zhao PDF Resume 10-27-25.pdf" to your GitHub repository
+                  in the same directory as this index.html file.
+                -->
+                <div class="border rounded-lg shadow-md overflow-hidden" style="height: 800px;">
+                    <embed src="Annie Zhao PDF Resume 10-27-25.pdf" type="application/pdf" width="100%" height="100%">
+                        <p class="p-6">Your browser does not support embedded PDFs. 
+                           You can <a href="Annie Zhao PDF Resume 10-27-25.pdf" class="text-brand-blue-700 underline font-medium">download the PDF</a> instead.
+                        </p>
+                    </embed>
+                </div>
+            </div>
+
+            <!-- Organizations Page Content -->
+            <div id="page-orgs" class="page-content hidden">
+                <h2 class="text-3xl font-bold text-brand-blue-900 mb-6">Organizations & Projects</h2>
+                <div class="space-y-8">
+                    
+                    <!-- Leadership & Organizations -->
+                    <div>
+                        <h3 class="text-2xl font-semibold text-brand-blue-700 border-b border-brand-orange-500 pb-2 mb-4">Leadership & Organizations</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 shadow-sm">
+                                <h3 class="text-xl font-bold text-brand-blue-700">Director of Mentorship, Finance Leadership Council (FLC)</h3>
+                                <p class="text-sm text-slate-500 mb-2">Apr 2025 - Present</p>
+                                <p class="text-slate-700">
+                                    Restructured the Mentorship Committee and managed a team of 5 to serve as academic liaisons. Created peer tutoring and advising programs for finance majors, training volunteers and writing reference guides to serve students in 14 events per semester.
+                                </p>
+                            </div>
+                            <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 shadow-sm">
+                                <h3 class="text-xl font-bold text-brand-blue-700">Marketing Team, Undergraduate Dean's Council (UGDC)</h3>
+                                <p class="text-sm text-slate-500 mb-2">Jan 2025 - Present</p>
+                                <p class="text-slate-700">
+                                    Marketed the Dean's Cup trivia tournament, attracting 56 participants. Planned and executed a Welcome Social, hosting 60+ business students during the 2025 Weeks of Welcome.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Career Development & Projects -->
+                    <div>
+                        <h3 class="text-2xl font-semibold text-brand-blue-700 border-b border-brand-orange-500 pb-2 mb-4">Career Development & Projects</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 shadow-sm">
+                                <h3 class="text-xl font-bold text-brand-blue-700">CLDS x UTD AKPsi Consulting Case Competition</h3>
+                                <p class="text-sm text-slate-500 mb-2">Finalist (Apr 2025)</p>
+                                <p class="text-slate-700">
+                                    Collaborated with a team of two to analyze the fintech budgeting app "FinBud." We developed a 10-minute proposal for a new retention strategy focused on reducing churn rate through specific UX improvements and a redesigned user onboarding process. Our recommendations advanced us to the final round of 5 out of 35 teams.
+                                </p>
+                            </div>
+                            <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 shadow-sm">
+                                <h3 class="text-xl font-bold text-brand-blue-700">Student Panel: Is AI Lowkey Doing Our Homework?</h3>
+                                <p class="text-sm text-slate-500 mb-2">UTD Week of AI (Spring 2025)</p>
+                                <p class="text-slate-700">
+                                    As part of a Short-term Working Group, I organized and facilitated a student panel focused on the impact and integration of Artificial Intelligence in higher education. This involved coordinating with panelists, defining key topics, and managing the event during UTD's "Week of AI."
+                                </p>
+                            </div>
+                             <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 shadow-sm">
+                                <h3 class="text-xl font-bold text-brand-blue-700">Financial Executive Experience (FEI & Frost Bank)</h3>
+                                <p class="text-sm text-slate-500 mb-2">Mentee (Oct 2024 - Apr 2025)</p>
+                                <p class="text-slate-700">
+                                    Mentored by a Dallas CFO and built a professional network with 30 peers and local industry leaders. Awarded a $1,000 scholarship upon completion of mentorship sessions and Frost Bank's Financial Literacy Program.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Writing Samples Page Content -->
+            <div id="page-writing" class="page-content hidden">
+                <h2 class="text-3xl font-bold text-brand-blue-900 mb-6">Writing Samples</h2>
+                <p class="text-lg text-slate-700 mb-6">
+                    Here are select essays and analytical pieces I have written. Click to read.
+                </p>
+                <div class="space-y-6">
+                    <!-- 
+                      IMPORTANT:
+                      For these links to work, you must upload the PDF files to your
+                      GitHub repository with these EXACT filenames.
+                    -->
+                    <!-- Essay 1 Button -->
+                    <button onclick="showPdfPage('ai')"
+                       class="block w-full text-left bg-slate-50 border border-slate-200 rounded-lg p-6 shadow-sm hover:shadow-md hover:border-brand-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-blue-700">
+                        <h3 class="text-xl font-bold text-brand-blue-700">Teaching Technology for Tomorrow</h3>
+                        <p class="text-sm text-slate-500 mb-2">How K-12 Education Must Change in the Ongoing Technological Revolution</p>
+                        <p class="text-slate-700">
+                            An analysis of the growing skill gap due to technology and a proposal for adapting K-12 education to better equip students with critical thinking for an AI-driven future.
+                        </p>
+                        <span class="inline-block text-brand-orange-600 font-semibold mt-4">Read Essay &rarr;</span>
+                    </button>
+                    <!-- Essay 2 Button -->
+                    <button onclick="showPdfPage('aa')"
+                       class="block w-full text-left bg-slate-50 border border-slate-200 rounded-lg p-6 shadow-sm hover:shadow-md hover:border-brand-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-blue-700">
+                        <h3 class="text-xl font-bold text-brand-blue-700">The Misguided Focus on Affirmative Action</h3>
+                        <p class="text-sm text-slate-500 mb-2">Analysis of <i>SFFA v. President and Fellows of Harvard College</i></p>
+                        <p class="text-slate-700">
+                            A critical analysis of Justice Ketanji Brown Jackson's dissent, arguing that the focus on university admissions is an ineffective approach to racial equality.
+                        </p>
+                        <span class="inline-block text-brand-orange-600 font-semibold mt-4">Read Essay &rarr;</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Goals Page Content -->
+            <div id="page-goals" class="page-content hidden">
+                <h2 class="text-3xl font-bold text-brand-blue-900 mb-6">My Goals</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Short-Term -->
+                    <div class="bg-slate-50 border-l-4 border-brand-orange-500 rounded-r-lg p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-brand-blue-700 mb-2">Short-Term Goals</h3>
+                        <p class="text-slate-700 text-lg">
+                            My immediate goal is to continue developing my technical skills in data analysis, specifically by gaining deeper proficiency in Tableau and R. I am also focused on leveraging my leadership roles in student organizations to drive meaningful projects and mentor other students.
+                        </p>
+                    </div>
+                    <!-- Long-Term -->
+                    <div class="bg-slate-50 border-l-4 border-brand-orange-500 rounded-r-lg p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-brand-blue-700 mb-2">Long-Term Goals</h3>
+                        <p class="text-slate-700 text-lg">
+                           Upon graduating in December 2026, I am seeking a full-time analytical role in corporate finance or supply chain management. I aim to apply my quantitative skills to internal operations, such as logistics planning, financial modeling, and process optimization.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Page Content -->
+            <div id="page-contact" class="page-content hidden">
+                <h2 class="text-3xl font-bold text-brand-blue-900 mb-6">Let's Connect</h2>
+                
+                <div class="max-w-md bg-slate-50 border border-slate-200 rounded-lg p-6 shadow-sm">
+                    <ul class="space-y-4">
+                        <!-- Email -->
+                        <li class="flex items-center gap-4">
+                            <!-- Email Icon -->
+                            <svg class="w-6 h-6 text-brand-blue-700 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                            </svg>
+                            <a href="mailto:anniezhao.tx@gmail.com" class="text-lg text-brand-blue-900 hover:text-brand-orange-600 hover:underline">anniezhao.tx@gmail.com</a>
+                        </li>
+                        <!-- LinkedIn -->
+                        <li class="flex items-center gap-4">
+                            <!-- LinkedIn Icon -->
+                            <svg class="w-6 h-6 text-brand-blue-700 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                            <a href="https://www.linkedin.com/in/annie-zhao-dtx/" target="_blank" rel="noopener noreferrer" class="text-lg text-brand-blue-900 hover:text-brand-orange-600 hover:underline">linkedin.com/in/annie-zhao-dtx</a>
+                        </li>
+                        <!-- Phone -->
+                        <li class="flex items-center gap-4">
+                            <!-- Phone Icon -->
+                            <svg class="w-6 h-6 text-brand-blue-700 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.211-.998-.552-1.348l-5.116-4.4c-.34-.298-.813-.426-1.263-.331s-.828.46-1.155.898l-1.36 1.36c-.254.254-.64.364-.99.364s-.736-.11-1.002-.376C9.098 16.33 8.356 15.11 7.632 13.88c-.724-1.23-.976-2.463-.976-3.715 0-.35.11-.636.364-.89l1.36-1.36c.438-.327.647-.803.55-1.253s-.54-1.02-1.04-1.36l-4.4-5.116A2.25 2.25 0 003.622 1.5H2.25A2.25 2.25 0 000 3.75v3z" />
+                            </svg>
+                            <span class="text-lg text-slate-800">(469) 554-0195</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </main>
+        
+        <!-- PDF Viewer Page 1: AI Essay -->
+        <div id="pdf-page-ai" class="pdf-viewer hidden">
+            <button class="back-button" onclick="showMainContent()">
+                &larr; Back to website
+            </button>
+            <h2 class="text-3xl font-bold text-brand-blue-900 mb-6">Teaching Technology for Tomorrow</h2>
+            <!-- 
+              IMPORTANT: For this embed to work on your live website, you MUST upload
+              "AI in Education Essay.pdf" to your GitHub repository
+              in the same directory as this index.html file.
+            -->
+            <div class="border rounded-lg shadow-md overflow-hidden" style="height: 1000px;">
+                <embed src="AI in Education Essay.pdf" type="application/pdf" width="100%" height="100%">
+                    <p class="p-6">Your browser does not support embedded PDFs. 
+                       You can <a href="AI in Education Essay.pdf" class="text-brand-blue-700 underline font-medium">download the PDF</a> instead.
+                    </p>
+                </embed>
+            </div>
+        </div>
+
+        <!-- PDF Viewer Page 2: AA Essay -->
+        <div id="pdf-page-aa" class="pdf-viewer hidden">
+            <button class="back-button" onclick="showMainContent()">
+                &larr; Back to website
+            </button>
+            <h2 class="text-3xl font-bold text-brand-blue-900 mb-6">The Misguided Focus on Affirmative Action</h2>
+            <!-- 
+              IMPORTANT: For this embed to work on your live website, you MUST upload
+              "Affirmative Action Supreme Court Case Analysis.pdf" to your GitHub repository
+              in the same directory as this index.html file.
+            -->
+            <div class="border rounded-lg shadow-md overflow-hidden" style="height: 1000px;">
+                <embed src="Affirmative Action Supreme Court Case Analysis.pdf" type="application/pdf" width="100%" height="100%">
+                    <p class="p-6">Your browser does not support embedded PDFs. 
+                       You can <a href="Affirmative Action Supreme Court Case Analysis.pdf" class="text-brand-blue-700 underline font-medium">download the PDF</a> instead.
+                    </p>
+                </embed>
+            </div>
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="text-center text-slate-500 mt-16 pt-8 border-t border-slate-200" id="main-footer">
+            <p>&copy; 2025 Annie Zhao. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript for Tab Navigation -->
+    <script>
+        // Set the default active tab
+        const defaultPage = 'about';
+        document.getElementById(`page-${defaultPage}`).classList.remove('hidden');
+
+        // --- Get Element References ---
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const pageContents = document.querySelectorAll('.page-content');
+        const mainContent = document.getElementById('main-content');
+        const mainNav = document.getElementById('main-nav');
+        const mainFooter = document.getElementById('main-footer');
+        const pdfViewers = document.querySelectorAll('.pdf-viewer');
+
+        /**
+         * Shows a specific tabbed content page (like 'about', 'resume', etc.)
+         */
+        function showPage(pageId) {
+            // Hide all page content
+            pageContents.forEach(page => {
+                page.classList.add('hidden');
+            });
+
+            // Deactivate all tab buttons
+            tabButtons.forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Show the selected page content
+            document.getElementById(`page-${pageId}`).classList.remove('hidden');
+
+            // Activate the selected tab button
+            document.querySelector(`.tab-button[onclick="showPage('${pageId}')"]`).classList.add('active');
+        }
+
+        /**
+         * Shows a specific PDF viewer "page" (like 'ai', 'aa')
+         */
+        function showPdfPage(pdfId) {
+            // Hide main content, nav, and footer
+            mainContent.classList.add('hidden');
+            mainNav.classList.add('hidden');
+            mainFooter.classList.add('hidden');
+
+            // Hide all PDF viewers
+            pdfViewers.forEach(viewer => {
+                viewer.classList.add('hidden');
+            });
+
+            // Show the selected PDF viewer
+            document.getElementById(`pdf-page-${pdfId}`).classList.remove('hidden');
+            window.scrollTo(0, 0); // Scroll to top
+        }
+
+        /**
+         * Hides all PDF viewers and shows the main website content
+         */
+        function showMainContent() {
+            // Hide all PDF viewers
+            pdfViewers.forEach(viewer => {
+                viewer.classList.add('hidden');
+            });
+
+            // Show main content, nav, and footer
+            mainContent.classList.remove('hidden');
+            mainNav.classList.remove('hidden');
+            mainFooter.classList.remove('hidden');
+            
+            // Note: The previously active tab remains active, so no need to call showPage()
+        }
+        
+        // --- Initial Styling for Tabs ---
+        tabButtons.forEach(button => {
+            button.classList.add(
+                'py-3', 'px-4', 'font-medium', 'text-center', 'text-slate-600', 
+                'border-b-2', 'border-transparent', 'hover:border-brand-orange-500', 
+                'hover:text-brand-orange-600', 'transition-colors', 'duration-150',
+                'focus:outline-none'
+            );
+            
+            if (button.classList.contains('active')) {
+                button.classList.add('border-brand-blue-700', 'text-brand-blue-700');
+                button.classList.remove('text-slate-600', 'border-transparent');
+            }
+        });
+
+        // --- Add Dynamic Styles ---
+        const style = document.createElement('style');
+        style.innerHTML = `
+            /* Style for the active tab */
+            .tab-button.active {
+                border-color: #1e40af; /* brand-blue-700 */
+                color: #172554; /* brand-blue-900 */
+                font-weight: 600;
+            }
+            
+            /* Style for the PDF viewer pages */
+            .pdf-viewer { 
+                margin-top: 2rem; 
+            }
+            
+            /* Style for the "Back" button on PDF pages */
+            .back-button {
+                display: inline-block;
+                padding: 0.5rem 1rem;
+                margin-bottom: 1.5rem;
+                font-weight: 500;
+                color: #172554; /* brand-blue-900 */
+                background-color: #EFF6FF; /* blue-50 */
+                border-radius: 0.5rem;
+                transition: background-color 0.2s;
+                cursor: pointer;
+            }
+            .back-button:hover {
+                background-color: #DBEAFE; /* blue-200 */
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Set the default 'about' tab to active on load
+        showPage('about');
+
+    </script>
+
+</body>
+</html>
+
+
+
